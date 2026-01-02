@@ -38,6 +38,7 @@
 3. Enter any password
 4. Click Login
 
+
 **What happens**: 
 - The vulnerable code thinks this is a valid SQL query
 - It bypasses password checking
