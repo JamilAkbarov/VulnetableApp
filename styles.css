@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.warning-banner {
+    background: #ff4444;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+.login-box, .dashboard {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.btn-primary, .btn-secondary, .btn-warning {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+    width: 100%;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-warning {
+    background: #ffc107;
+    color: #333;
+    margin-left: 10px;
+}
+
+.btn-primary:hover, .btn-secondary:hover, .btn-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.error-message {
+    color: #dc3545;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    background: #f8d7da;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.demo-accounts {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.demo-accounts h3 {
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.demo-accounts p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.vulnerability-hints {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 12px;
+    border: 3px solid #ffc107;
+}
+
+.vulnerability-hints h2 {
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+.vulnerability-hints ul {
+    list-style-position: inside;
+    color: #333;
+}
+
+.vulnerability-hints li {
+    margin: 10px 0;
+    padding: 8px;
+    background: #fff3cd;
+    border-radius: 4px;
+}
+
+.vulnerability-hints code {
+    background: #333;
+    color: #0f0;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+}
+
+.dashboard .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.user-info {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border-left: 4px solid #28a745;
+}
+
+.user-info h2 {
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.user-info p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 16px;
+}
+
+.user-info strong {
+    color: #333;
+}
+
+.actions {
+    margin: 25px 0;
+}
+
+.actions h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.all-users {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff3cd;
+    border-radius: 8px;
+    border: 2px dashed #ffc107;
+}
+
+.all-users h3 {
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+.user-card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border-left: 4px solid #667eea;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.user-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
