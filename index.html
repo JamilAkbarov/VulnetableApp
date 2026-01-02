@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulnerable Login System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="warning-banner">
+            ⚠️ INTENTIONALLY VULNERABLE APPLICATION - FOR EDUCATIONAL PURPOSES ONLY ⚠️
+        </div>
+        
+        <div class="login-box">
+            <h1>User Login</h1>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+            
+            <div id="errorMessage" class="error-message"></div>
+            
+            <div class="demo-accounts">
+                <h3>Demo Accounts:</h3>
+                <p><strong>Admin:</strong> admin / admin123</p>
+                <p><strong>User:</strong> john / password</p>
+                <p><strong>User:</strong> alice / alice2024</p>
+            </div>
+        </div>
+        
+        <div class="vulnerability-hints">
+            <h2>🔓 Security Challenge Hints:</h2>
+            <ul>
+                <li>Try SQL injection in the username field</li>
+                <li>Inspect the browser's localStorage after login</li>
+                <li>Check the URL parameters on the dashboard</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
