@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="warning-banner">
+            ⚠️ INTENTIONALLY VULNERABLE APPLICATION - FOR EDUCATIONAL PURPOSES ONLY ⚠️
+        </div>
+        
+        <div class="dashboard">
+            <div class="header">
+                <h1>User Dashboard</h1>
+                <button onclick="logout()" class="btn-secondary">Logout</button>
+            </div>
+            
+            <div class="user-info" id="userInfo">
+                <!-- User data will be loaded here -->
+            </div>
+            
+            <div class="actions">
+                <h3>Actions:</h3>
+                <button onclick="viewProfile()" class="btn-primary">View My Profile</button>
+                <button onclick="editUserId()" class="btn-warning">Edit User ID (Vulnerable!)</button>
+            </div>
+            
+            <div class="all-users">
+                <h3>All Users in System:</h3>
+                <div id="usersList"></div>
+            </div>
+        </div>
+        
+        <div class="vulnerability-hints">
+            <h2>🔓 Exploitation Hints:</h2>
+            <ul>
+                <li>Check the URL parameter <code>?userId=X</code></li>
+                <li>Try changing the userId in localStorage</li>
+                <li>Modify the userId parameter to view other users' data</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+    <script>
+        // Load dashboard when page loads
+        window.onload = function() {
+            checkAuth();
+            loadDashboard();
+        };
+    </script>
+</body>
+</html>
